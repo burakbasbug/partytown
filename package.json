@@ -65,7 +65,7 @@
     "build.watch": "rollup -c scripts/rollup.config.js -w --configDev",
     "start": "npm run dev",
     "dev": "tsc && concurrently \"npm:build.watch\" \"npm:tsc.watch\" -n build,tsc -c magenta,yellow",
-    "release": "npm run build && npm test && np --no-tests",
+    "release": "npm run build && np --no-tests --no-publish",
     "serve": "node scripts/serve.cjs 4000",
     "serve.test": "node scripts/serve.cjs 4001",
     "serve.atomics": "node scripts/serve.cjs 4002 --atomics",
